@@ -2,6 +2,8 @@ package com.platzi.market.persistence.entity;
 
 import jakarta.persistence.*;
 
+import java.util.List;
+
 @Entity
 @Table(name = "categoria")
 public class Categoria {
@@ -13,6 +15,9 @@ public class Categoria {
 
     private String descripcion;
     private Boolean estado;
+
+    @OneToMany
+    private List<Producto> productos;
 
     public Integer getIdCategoria() {
         return idCategoria;
