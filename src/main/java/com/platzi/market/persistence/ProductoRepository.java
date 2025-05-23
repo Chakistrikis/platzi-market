@@ -2,10 +2,15 @@ package com.platzi.market.persistence;
 
 import com.platzi.market.persistence.crud.ProductCrudRepository;
 import com.platzi.market.persistence.entity.Producto;
+import org.springframework.stereotype.Repository;
 
 import java.util.List;
 import java.util.Optional;
 
+@Repository //Indicamos que esta clase se encarga de interactuar con la base de datos.
+/*
+    Se puede usar @Component que es una generalización de estas operaciones (Spring)
+*/
 public class ProductoRepository {
     private ProductCrudRepository productCrudRepository;
 
